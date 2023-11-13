@@ -1,0 +1,28 @@
+﻿<Window x:Class="TimeManagementApp.RecordHours"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Record Hours" Height="400" Width="400">
+    <Grid Background="#FFE3D6B8">
+        <StackPanel Margin="20">
+            <!-- Label for Study Date -->
+            <Label Content="Study Date:" VerticalAlignment="Center"/>
+            <DatePicker x:Name="datePicker" SelectedDate="{Binding SelectedDate}" Margin="0,5" Width="360" PreviewKeyDown="DatePicker_PreviewKeyDown"/>
+
+
+            <!-- Label for Module Code -->
+            <Label Content="Module Code:" VerticalAlignment="Center"/>
+            <ComboBox x:Name="moduleCodeComboBox" DisplayMemberPath="Code" SelectedValuePath="Code" SelectedValue="{Binding SelectedModuleCode}" Margin="0,5" />
+
+            <StackPanel Orientation="Horizontal" Margin="0,10">
+                <Label Content="Hours spent:" VerticalAlignment="Center"/>
+                <TextBox x:Name="hoursTextBox" Width="80"/>
+            </StackPanel>
+
+            <!-- Error label for displaying validation error message in red -->
+            <Label x:Name="errorLabel" Content="" Foreground="Red" Margin="0,10"/>
+
+            <Button Content="Save" Click="SaveButton_Click" Margin="0,20" Background="#FF1986DA" />
+            <Button Content="Next" Click="NextButton_Click" Margin="0,10" Background="#FF1986DA" />
+        </StackPanel>
+    </Grid>
+</Window>

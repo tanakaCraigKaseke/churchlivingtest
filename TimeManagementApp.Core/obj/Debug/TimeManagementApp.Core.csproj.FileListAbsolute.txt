@@ -1,0 +1,9 @@
+C:\Users\tanakakaseke\Desktop\work\Hazel\TimeManagementApp\TimeManagementApp.Core\bin\Debug\TimeManagementApp.Core.dll
+C:\Users\tanakakaseke\Desktop\work\Hazel\TimeManagementApp\TimeManagementApp.Core\bin\Debug\TimeManagementApp.Core.pdb
+C:\Users\tanakakaseke\Desktop\work\Hazel\TimeManagementApp\TimeManagementApp.Core\obj\Debug\TimeManagementApp.Core.csproj.AssemblyReference.cache
+C:\Users\tanakakaseke\Desktop\work\Hazel\TimeManagementApp\TimeManagementApp.Core\obj\Debug\TimeManagementApp.Core.csproj.CoreCompileInputs.cache
+C:\Users\tanakakaseke\Desktop\work\Hazel\TimeManagementApp\TimeManagementApp.Core\obj\Debug\TimeManagementApp.Core.dll
+C:\Users\tanakakaseke\Desktop\work\Hazel\TimeManagementApp\TimeManagementApp.Core\obj\Debug\TimeManagementApp.Core.pdb
+C:\Users\tanakakaseke\Desktop\work\Hazel\TimeManagementApp\TimeManagementApp.Core\bin\Debug\Dapper.dll
+C:\Users\tanakakaseke\Desktop\work\Hazel\TimeManagementApp\TimeManagementApp.Core\bin\Debug\Dapper.xml
+C:\Users\tanakakaseke\Desktop\work\Hazel\TimeManagementApp\TimeManagementApp.Core\obj\Debug\TimeManagementApp.Core.csproj.CopyComplete

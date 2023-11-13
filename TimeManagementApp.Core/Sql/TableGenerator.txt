@@ -1,0 +1,48 @@
+﻿-- Create the Users table with auto-incremented primary key
+CREATE TABLE Users (
+    UserId INT PRIMARY KEY IDENTITY(1,1),
+    FirstName VARCHAR(255),
+    LastName VARCHAR(255),
+    Username VARCHAR(255),
+    PasswordHash VARCHAR(255),
+    CreatedAt DATETIME,
+    UpdatedAt DATETIME
+);
+
+-- Create the Semesters table with auto-incremented primary key and foreign key reference to Users
+CREATE TABLE Semesters (
+    SemesterId INT PRIMARY KEY IDENTITY(1,1),
+    UserId INT,
+    Name VARCHAR(255),
+    Weeks DECIMAL(5, 2),
+    StartDate DATE,
+    CreatedAt DATETIME,
+    UpdatedAt DATETIME,
+    FOREIGN KEY (UserId) REFERENCES Users(UserId)
+);
+
+-- Create the Modules table with auto-incremented primary key and foreign key references to Users and Semesters
+CREATE TABLE Modules (
+    ModuleId INT PRIMARY KEY IDENTITY(1,1),
+    UserId INT,
+    SemesterId INT,
+    Name VARCHAR(255),
+    Code VARCHAR(255),
+    Credits DECIMAL(10, 2),
+    HoursPerWeek DECIMAL(10, 2),
+    CreatedAt DATETIME,
+    UpdatedAt DATETIME,
+    FOREIGN KEY (UserId) REFERENCES Users(UserId),
+    FOREIGN KEY (SemesterId) REFERENCES Semesters(SemesterId)
+);
+
+-- Create the ModuleLogs table with auto-incremented primary key and foreign key reference to Modules
+CREATE TABLE ModuleLogs (
+    ModuleLogId INT PRIMARY KEY IDENTITY(1,1),
+    ModuleId INT,
+    HoursSpent DECIMAL(10, 2),
+    Date DATE,
+    CreatedAt DATETIME,
+    UpdatedAt DATETIME,
+    FOREIGN KEY (ModuleId) REFERENCES Modules(ModuleId)
+);

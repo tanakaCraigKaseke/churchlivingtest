@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="TimeManagementApp.WPFUI.Views.MainPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TimeManagementApp.WPFUI.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="1000">
+    <Grid Margin="0,126,0,10">
+        <Label Content="{Binding LoggedInPerson}" HorizontalAlignment="Left" Margin="10,10,0,0" FontWeight="Bold" FontSize="15" VerticalAlignment="Top"/>
+        <Label Content="Week filter:" HorizontalAlignment="Left" Margin="10,40,0,0"  FontSize="13" VerticalAlignment="Top"/>
+        <DatePicker SelectedDate="{Binding FilterDate, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="12,72,0,0" VerticalAlignment="Top" Width="187"/>
+        <Label Content="Showing result for: " HorizontalAlignment="Left" Margin="10,101,0,0"  FontSize="13" VerticalAlignment="Top"/>
+        <Label Content="{Binding FilterDisplay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="136,101,0,0" FontWeight="Bold"  FontSize="13" VerticalAlignment="Top"/>
+        <Button Content="Add Module" HorizontalAlignment="Left" Margin="624,72,0,0" VerticalAlignment="Top" Width="150"  />
+
+        <!-- Add the ListView here -->
+        <ListView ItemsSource="{Binding UserModules}" HorizontalAlignment="Center" Margin="0,150,0,0" VerticalAlignment="Top" Width="900">
+            <!-- Define your ListView items here -->
+            <ListView.View>
+                <!-- Define the columns for your ListView here -->
+                <GridView>
+                    <GridViewColumn Header="Module name" Width="100" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="Semester name" Width="100" DisplayMemberBinding="{Binding SemesterName}"/>
+                    <GridViewColumn Header="Module code" Width="100" DisplayMemberBinding="{Binding Code}"/>
+                    <GridViewColumn Header="Credits" Width="100" DisplayMemberBinding="{Binding Credits}"/>
+                    <GridViewColumn Header="Hours per week" Width="100" DisplayMemberBinding="{Binding HoursPerWeek}"/>
+                    <GridViewColumn Header="Hours used" Width="100" DisplayMemberBinding="{Binding TotalHoursSpent}"/>
+                    <GridViewColumn Header="Hours remaining" Width="100" DisplayMemberBinding="{Binding HoursRemaining}"/>
+                    <GridViewColumn Header="Self Study Hours" Width="100" DisplayMemberBinding="{Binding SelfStudyHoursPerWeek}"/>
+                    <!-- Add more columns as needed -->
+                </GridView>
+            </ListView.View>   
+        </ListView>
+
+    </Grid>
+</UserControl>
